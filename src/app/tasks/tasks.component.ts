@@ -45,4 +45,6 @@ export class TasksComponent {
   onCompleteTask(id: string) {
     this.tasks = this.tasks.filter((task) => task.id !== id);
   }
+
+  onStartAddTask() {}
 }

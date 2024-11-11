@@ -2,9 +2,22 @@
   <header>
     <h2>{{ name }}'s Tasks</h2>
     <menu>
-      <button>Add Task</button>
+      <button (click)="onStartAddTask()">Add Task</button>
     </menu>
   </header>
+
+  <section id="add-task">
+    <h2>Add a new task</h2>
+    <form action="" method="post">
+      <label for="title">Title</label>
+      <input id="title" type="text" /><br />
+      <label for="summary">Description</label>
+      <input id="summary" type="text" /><br />
+      <label for="date">Date</label>
+      <input type="date" /><br />
+      <button>Add</button>
+    </form>
+  </section>
 
   <ul>
     @for(task of selectedUserTasks; track task.id){
